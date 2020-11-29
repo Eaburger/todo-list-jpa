@@ -6,7 +6,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import br.com.todolist.model.ListaTarefa;
+
 import br.com.todolist.model.Usuario;
 
 public class UsuarioRepository implements Serializable{

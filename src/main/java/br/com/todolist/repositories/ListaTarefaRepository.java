@@ -6,7 +6,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 
-import org.w3c.dom.Entity;
+
 
 import br.com.todolist.model.ListaTarefa;
 
