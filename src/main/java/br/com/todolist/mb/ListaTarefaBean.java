@@ -22,7 +22,7 @@ public class ListaTarefaBean implements Serializable {
     private List<ListaTarefa> listaTarefas;
 
     public void Consultar() {
-        listaTarefas = repository.listarTudo();
+        listaTarefas = repository.listaTudo();
     }
 
     public List<ListaTarefa> getListaTarefas() {
