@@ -1,0 +1,29 @@
+package br.com.todolist.repositories;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+
+import br.com.todolist.model.ListaTarefa;
+import br.com.todolist.model.Usuario;
+
+public class UsuarioRepository implements Serializable{
+
+	
+	private static final long serialVersionUID = 1L;
+	
+	@Inject
+	private EntityManager entityManager;
+	
+	public List<Usuario> listaTudo(){
+		
+		return entityManager.createQuery("from usuario",Usuario.class).getResultList();
+		
+		
+		
+	
+	}
+	
+}
