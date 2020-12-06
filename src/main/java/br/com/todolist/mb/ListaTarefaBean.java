@@ -22,7 +22,7 @@ public class ListaTarefaBean implements Serializable {
 
     private List<ListaTarefa> listaTarefas;
     
-    private ListaTarefa novaTarefa;
+    private ListaTarefa novaTarefa = new ListaTarefa();
 
     public void consultar() {
         listaTarefas = repository.listaTudo();
@@ -48,7 +48,7 @@ public class ListaTarefaBean implements Serializable {
 		return novaTarefa;
 	}
     
-    public StatusTarefa [] getStatusTarefas() {
+    public StatusTarefa [] getStatusTarefa() {
     	return StatusTarefa.values();
     	
     	
