@@ -10,6 +10,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -44,6 +45,10 @@ public class ListaTarefa implements Serializable {
 	@Enumerated(EnumType.ORDINAL)
 	@Column(name = "status_tarefa")
 	private StatusTarefa statusTarefa;
+	
+	@ManyToOne
+	private Usuario usuario;
+	
 
 	public ListaTarefa() {
 	}
