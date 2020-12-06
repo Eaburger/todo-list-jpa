@@ -9,6 +9,7 @@ import javax.persistence.EntityManager;
 
 
 import br.com.todolist.model.ListaTarefa;
+import br.com.todolist.util.Transacional;
 
 public class ListaTarefaRepository implements Serializable {
 
@@ -23,6 +24,13 @@ public class ListaTarefaRepository implements Serializable {
 		return entityManager.createQuery("from lista_tarefa", ListaTarefa.class).getResultList();
 		
 		
+		
+	}
+	
+	@Transacional
+	public ListaTarefa Salvar(ListaTarefa novaTarefa) {
+		
+		return entityManager.merge(novaTarefa);
 		
 	}
 	
