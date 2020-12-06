@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -38,6 +40,10 @@ public class ListaTarefa implements Serializable {
 
 	@Column(name = "observacao", length = 120)
 	private String observacao;
+
+	@Enumerated(EnumType.ORDINAL)
+	@Column(name = "status_tarefa")
+	private StatusTarefa statusTarefa;
 
 	public ListaTarefa() {
 	}
@@ -124,6 +130,14 @@ public class ListaTarefa implements Serializable {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public StatusTarefa getStatusTarefa() {
+		return statusTarefa;
+	}
+
+	public void setStatusTarefa(StatusTarefa statusTarefa) {
+		this.statusTarefa = statusTarefa;
 	}
 
 }
